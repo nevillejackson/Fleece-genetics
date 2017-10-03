@@ -1,0 +1,34 @@
+%\documentclass{article}
+%\usepackage{lscape,longtable}
+%\begin{document}
+\begin{center}
+%\begin{landscape}
+\begin{table}[!htp]
+\caption{Definition of traits predicted from measured traits using an empirical relationship and of traits calculated from predicted traits}  
+\label{tab:pred}
+\vspace{0.1in}
+\begin{tabular}{p{1.5in}|p{0.8in}|p{1.2in}|p{2.0in}} \hline
+    Trait name & Abbreviation  & Units &  Obtained by \\ 
+\hline
+ & & & \\
+Standard deviation of follicle depth & SDFd & mm & $SDFd  =   -0.4874 + 1.8282(Fu)$ \\
+ & & & \\
+Intrinsic fibre curvature & Icurv & radians/mm & $ICurv  =  0.22447 + 0.25223(Fc)$ \\
+ & & & \\
+\hline
+ & & & \\
+Intrinsic fibre radius of curvature & Irad & mm & $IRad  =   \frac{1}{(ICurv)}$ \\
+ & & & \\
+Crimp amplitude & Crampl & mm & $Crampl  =  \sqrt{(Irad)^{2} - \left(\frac{Crwvl}{2\pi}\right)^{2} }$ \\
+ & & & \\
+Fibre length to staple length ratio & LfovLs & no units & $\frac{L_{f}}{L_{s}}  =  \frac{2 \pi Irad}{Crampl}$ \\
+ & & & \\
+Fibre length & Lf & mm & $L_{f}  =  L_{s} \left( \frac{L_{f}}{L_{s}} \right) $ \\
+ & & & \\
+\hline
+
+\end{tabular}
+\end{table}
+%\end{landscape}
+\end{center}
+%\end{document}
