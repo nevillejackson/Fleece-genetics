@@ -1,0 +1,36 @@
+%\documentclass{article}
+%\usepackage{lscape,longtable}
+%\begin{document}
+\begin{center}
+%\begin{landscape}
+\begin{table}[p]
+\caption{Definition of traits calculated from measured traits using a known functional relationship}  
+\label{tab:ab32sym2}
+\vspace{0.1in}
+\begin{tabular}{p{1.5in}|p{0.8in}|p{1.2in}|p{2.0in}} \hline
+    Trait name & Abbreviation  & Units &  Functional relationship \\ 
+\hline
+ & & & \\
+Primary follicle density & Fnpua & no per $mm^{2}$ & $Fnpua = \frac{Fnua}{(Fr + 1)}$ \\
+ & & & \\
+Secondary follicle density & Fnsua & no per $mm^{2}$ & $Fnsua = \frac{(Fr)(Fnua)}{(Fr + 1)}$ \\
+ & & & \\
+Total primary follicle number & Fnpt & No per head x $10^{6}$ & $ Fnpt = (Fnpua)(Sarea)$ \\
+ & & & \\
+Total secondary follicle number & Fnst & No per head x $10^{6}$ & $ Fnst = (Fnsua)(Sarea)$ \\
+ & & & \\
+Crimp wavelength & Crwvl & mm & $ Crwvl = \frac{25.4}{Crimp}$ \\
+ & & & \\
+Crimps per staple & Crst & number & $Crst = Crimp * Stal / 25.4 $ \\
+ & & & \\
+Crimps per 365 days (crimp frequency in time) & Crstadj & number per 365 days & $Crstadj = Crimp * Staladj / 25.4 $ \\
+ & & & \\
+Crimp wavelength in time & Crwvt & days & $Crwvt = \frac{365}{Crstadj} $ \\
+ & & & \\
+\hline
+
+\end{tabular}
+\end{table}
+%\end{landscape}
+\end{center}
+%\end{document}
