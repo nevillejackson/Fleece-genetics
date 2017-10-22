@@ -21,7 +21,7 @@
 
 \clearpage
 \section{Acknowledgement}
-The data analysed here were collected while I worked at CSIRO Division of Animal Genetics and Division of Animal Production. I would like to acknowledge the contributions of Dr Ted Nay and Mr Ian Maddocks, and the encouragement given by Dr Helen Newton Turner, Dr J M Rendel, Dr A A Dunlop, and Dr T W Scott. I would also like to acknowledge the encouragement of Dr J M Watts in resurrecting this material for re-analysis with more advanced statistical technology, and in suggesting that the emphasis should be on fibre characteristics related to processing performance and procduct quality as well as production characteristics such as clean wool weight.
+The data analysed here were collected while I worked at CSIRO Division of Animal Genetics and Division of Animal Production. I would like to acknowledge the contributions of Dr Ted Nay and Mr Ian Maddocks, and the encouragement given by Dr Helen Newton Turner, Dr J M Rendel, Dr A A Dunlop, and Dr T W Scott. I would also like to acknowledge the encouragement of Dr J M Watts in resurrecting this material for re-analysis with more advanced statistical technology, and in suggesting that the emphasis should be on fibre characteristics related to processing performance and product quality as well as production characteristics such as clean wool weight.
 
 
 \clearpage
@@ -48,7 +48,7 @@ in three selected lines. There was also an unselected control line.
 
 During the course of that experiment some image analysis technology was developed for skin section images. This allowed measurement of the diameter of primary and secondary follicles, in addition to counting their density. These new measurements are available only on the last three years of the experiment but are an important extension which may change the scope and focus of the above multivriate analyses.
 
-There has also been some important progress in our understanding of follicle development in sheep. The work of Moore(....) has shown that follicles develop from a population of pre-papilla cells and that if primary follicle development is suppressed (fewer or smaller primaries) then there are more pre-papilla cells left over to divide, and to develop into secondary follicles. The dynamics of the pre-papilla cell population can be modelled mathematically, so that the relationship between primary development and secondary development can be quantified. The consequences of this for a genetic analysis of primary and secondary follicle development are significant - there is nonlinearity and an element of functional relationships between traits neither of which are taken into account in traditional quantitative genetic analyses.
+There has also been some important progress in our understanding of follicle development in sheep. The work of Moore et al(1989)~\cite{moor:89} has shown that follicles develop from a population of pre-papilla cells and that if primary follicle development is suppressed (fewer or smaller primaries) then there are more pre-papilla cells left over to divide, and to develop into secondary follicles. The dynamics of the pre-papilla cell population can be modelled mathematically, so that the relationship between primary development and secondary development can be quantified. The consequences of this for a genetic analysis of primary and secondary follicle development are significant - there is nonlinearity and an element of functional relationships between traits neither of which are taken into account in traditional quantitative genetic analyses.
 
 The objectives of this study  are diverse and probably overambitious. Briefly we would like to
 \begin{itemize}
@@ -347,13 +347,27 @@ In view of the above, the experiment was simply not carried on for long enough t
 
 The experiment does however provide an important pedigreed data set with some interesting measurements not available elsewhere. We now proceed to an analysis of the pedigree data.
 
-\subsection{Phenotypic parameters}
-\subsubsection{Phenotypic variance}
-\subsubsection{Phenotypic correlation}
+\clearpage
+\subsection{Parameters}
+It is important to present phenotypic as well as genetic parameters. They are required in calculating responses to selection. Heritabilities and genetic correlations alone are not suffficient.
 
-\subsection{Genetic parameters}
-\subsubsection{Proportion of variance which is genetic}
-\subsubsection{Genetic correlation}
+\subsubsection{Phenotypic variances}
+Phenotypic variances and their standard errors are presented in Table~\ref{tab:pvar}
+\input{tabpvar.tex}
+The columns CI95lo and CI95hi represent the lower and upper limits of a 95 per
+cent confidence interval for the variance estimate.
+
+\subsubsection{Correlations}
+Phenotypic, genetic and environmental correlations for each pair of traits are presented in Table~\ref{tab:corr}
+\input{tabcorr.tex}
+The symbols E(I), G(Ia), and P(I) in the components column indicate whether the correlation is environmental, additive genetic, or phenotypic. The symbol (I) is there to indicate that these correlations are based on variation of effects operating in individuals, not effects of maternal genes or maternal environment. There were no maternal genetic or environmental components fitted in this analysis. The columns CI95lo and CI95hi represent the lower and upper limits of a 95 percent confidence interval for the correlation estimate. The column labelled Estimate is a point estimate and should be at the center of the confidence limits.
+
+ This is a huge table occupying 219 pages. It is considered important to have the environmental, genetic and phenotypic estimates presented side-by-side. It represents three correlation matrices of order 56. These are of course symmetric, but we present all traitpairs for each trait so there is duplication. For example you can find Stal:Bwt and also Bwt:Stal, and the estimates will be the same.
+
+\subsubsection{Proportion of phenotypic variance due to each component}
+We calculate the proportion of variance for both the environmental and additive genetic components. These are presented in Table~\ref{tab:herit}. The additive genetic component, as a proportion, is conventionally referred to as heritability.
+\input{tabherit.tex}
+Most measured wool traits have a heritability of between 0.35 and 0.5. There is an exceptional estimate for crimp frequency ( 0.97) and this will have to be investigated as the heritability of follicle curvature  (Fc) is much lower (0.63). The heritability estimates for Fnua and Fr are slightly low at around 0.3. The scores (Colour, Fly, Flcrot, Bactst, MycD) have low heritabilities, and this reflects the low incidences for these traits. Birthcoat hairiness ( Bcts and Bctb) is highly heritable. Twinning (NLB and NLW) is around 0.2 for heritability.
 
 \subsection{Multivariate analysis}
 
@@ -392,6 +406,9 @@ Jackson, N. (2015) An Overview of the R package dmm.
 
 \bibitem{jack:86}
 Jackson, N. Lax, J. and Wilson, R.L.(1986) Sex and selection for fleece weight in Merino sheep. Zeitschrift fur Tierzuchtung und Zuchtungsbiologie. Bd. 103:97-115
+
+\bibitem{moor:89}
+Moore, G.P.M, Jackson, N. and Lax, J. (1989) Evidence of a unique developmental mechanism specifting follicle density and fibre size in sheep selecterd for single skin and fleece characters. Genetical Reaearch. 53:57-62
 
 \bibitem{nago:81}
 Nagorcka, B.N. (1981) Theoretical mechanism for crimp.
