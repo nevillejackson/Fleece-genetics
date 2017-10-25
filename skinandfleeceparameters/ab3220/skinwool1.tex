@@ -1,0 +1,400 @@
+%
+% Draft  document skinwool.tex
+% Notes on genetic analysis of ab32 and ab20 skin and wool data
+%
+ 
+\documentclass[titlepage]{article}  % Latex2e
+\usepackage{graphicx,lscape,subfigure}
+\usepackage{bm,longtable}
+\usepackage{textcomp}
+ 
+
+\title{ Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection and estimates of additive genetic parameters}
+\author{Neville Jackson }
+\date{24 Oct 2017} 
+
+ 
+\begin{document} 
+ 
+\maketitle      
+\tableofcontents
+
+\clearpage
+\section{Acknowledgement}
+The data analysed here were collected while I worked at CSIRO Division of Animal Genetics and Division of Animal Production. I would like to acknowledge the contributions of Dr Ted Nay and Mr Ian Maddocks, and the encouragement given by Dr Helen Newton Turner, Dr J M Rendel, Dr A A Dunlop, and Dr T W Scott. I would also like to acknowledge the encouragement of Dr J M Watts in resurrecting this material for re-analysis with more advanced statistical technology, and in suggesting that the emphasis should be on fibre characteristics related to processing performance and product quality as well as production characteristics such as clean wool weight.
+
+
+\clearpage
+\section{Abstract}
+
+\clearpage
+\section{Introduction} 
+	Some years ago an attempt was made to study the relationship between components of clean wool weight and skin characteristics obtained from histological examination of skin biopsy samples (Jackson, Nay, and Turner(1975)~\cite{jack:75}. What came out of that study was that skin characteristics could explain a large proportion of the genetic variatrion in clean wool weight, and that the genetic covariance between skin characteristics and wool weight components could be partitioned into three independent functional relationships which were interpreted as three independent sets of genes.
+
+	The three independent factors were identified as 
+\begin{itemize}
+\item large number of secondary follicles
+\item straight deep follicles
+\item primary follicle density
+\end{itemize}
+
+	This analysis led to a selection experiment (AB32 in CSIRO jargon) which attempted to select for
+\begin{itemize}
+\item large follicles
+\item large total number of follicles
+\item both large follicles and large number of follicles simultaneously
+\end{itemize}
+in three selected lines. There was also an unselected control line ( AB20 in CSIRO jargon).
+
+During the course of that experiment some image analysis technology was developed for skin section images. This allowed measurement of the diameter of primary and secondary follicles, in addition to counting their density. These new measurements are available only on the last three years of the experiment but are an important extension which may change the scope and focus of the above multivariate analyses.
+
+There has also been some important progress in our understanding of follicle development in sheep. The work of Moore et al(1989)~\cite{moor:89} has shown that follicles develop from a population of pre-papilla cells and that if primary follicle development is suppressed (fewer or smaller primaries) then there are more pre-papilla cells left over to divide, and to develop into secondary follicles. The dynamics of the pre-papilla cell population can be modelled mathematically, so that the relationship between primary development and secondary development can be quantified. The consequences of this for a genetic analysis of primary and secondary follicle development are significant - there is nonlinearity and an element of functional relationships between traits neither of which are taken into account in traditional quantitative genetic analyses.
+
+The objectives of this study  are diverse and probably overambitious. Briefly we would like to
+\begin{itemize}
+\item summarize the response to selection which was obtained in the above experiment
+\item estimate additive genetic parameters for a comprehensive range of skin and wool characteristics
+\item redo the multivariate analyses mentioned above with an emphasis on fibre quality as well as wool production
+\item work out how to include knowledge of the developmental relationships between characteristics in a quantitative genetic analysis and apply this to the Moore model mentioned above
+\item do a systematic check for nonlinearities and shifts in genetic parameters, and find a way of including these in a quantitative genetic analysis
+\end{itemize}
+One of the benefits of setting out such a broad objective is that the areas where we fail become indicators of future research directions.
+
+Part I of this document deals with only the first two goals - describing responses to selection in the three selected lines, and presenting estimates of additive genetic parameters for 56 skin and wool characteristics.
+
+Part II will deal with multivariate analyses of additive genetic covariation.
+\section{Materials and methods}
+The sheep and the measurements thereon included in this study represent a substantial investment of CSIRO resources over 11 years of a breeding trial and several more years of laboratory measurement work. Unfortunately the experiment was terminated abruptly by a political decision and was never properly analysed or published. What we have, for the present study, is a set of measurements exhibiting various degrees of incompleteness. The present analysis is therefore somewhat complicated and the results may be affected by the severe imbalance with respect to some traits.
+
+\subsection{ Sheep population studied}
+The selection experiment is known as AB32 in CSIRO jargon. It commenced in 1974. For two years (1974 and 1975) matings were made of a set of introduced Fine Merino rams across a set of CSIRO bred Medium Merino ewes to generate the base generation animals for a selection trial. Measurements were made on these base generation progeny.
+
+Then, starting with the 1976 mating, the base generation animals were allocate at random to three selection lines and then selected as follows
+\begin{description}
+\item[Line 1] selected for large follicle depth
+\item[Line 2] selected for large number of follicles per head (estimated by multiplying follicle density by body surface area)
+\item[Line 3] selected for both large follicle depth and large number of follicles per head
+\end{description}
+Selection continued until 1985, the animals born in 1985 being the last progeny of the selected lines with measurements available.
+
+There was also an unselected control line ( AB20 in CSIRO jargon) which was a group of Medium Merino sheep which served as an unselected control for all sheep selection experimants at 'Longford' Research Station. The control line structure is described in Watson, Jackson, and Whiteley(1977)~\cite{wats:77}.
+
+Pedigree information was available on all sheep, in the case of AB32 extending back to 1974, and in the case of AB20 extendoing back to 1968.
+
+\subsection{Traits measured}
+There were two categories of traits considered for analysis in Part I. 
+
+\subsubsection{Traits for which direct measurements were available}
+A brief description of the traits for which measurements were available is given in Table~\ref{tab:tdef}.
+
+\input{table1.tex}
+
+All of these measured traits were not available on all of the sheep. In particular the traits obtained by image analysis measurement on skin sections were only obtained for the 1982 to 1985 drops of selected lines and only the 1983 and 1985 drops of the control line. Also Crimp Frequency was only measured for 1974 to 1977 and 1982 to 1985. Various other subsets of traits had various patterns of missing observations. 
+
+The actual numbers of sheep measured for each trait and each pair of traits is given in Tables~\ref{tab:counts1} to ~\ref{tab:counts5}. It can be seen that each pair of traits has a different number of observations, with the exception that there are some subsets of traits ( such as the 17 image analysis traits from Dp to Gt30D) for which the replication almost identical. Two traits, Birwt and WeanGfw, had very few observations when paired with the image analysis traits (Dp, etc) and had to be omitted from most of the analyses.
+
+\input{table2.tex}
+\input{table3.tex}
+\input{table4.tex}
+\input{table5.tex}
+\input{table6.tex}
+
+This heterogeneity of numbers of observations across traits and pairs of traits required a special approach in statistical analysis which is discussed in section~\ref{sect:stats}.
+
+\subsubsection{Traits calculated from measured traits using a known functional relationship}
+These traits are really just another way of looking at the same measurements. If the functional relationship(s) are nonlinear, then we are not introducing redundant information by adding these calculated traits to the multivariate set. Sometimes it helps with biological interpretation to view the trait space from another perspective.
+
+The traits calculated in this way are defined in Table~\ref{tab:caltraits}.
+
+\input{table7.tex}
+ 
+Some of the traits classed as measurements and included in the previous section should, if one wishes to be pedantic, be included here. Examples are Sarea, Fnt, and Cww. Also Staladj, Cwwadj, and Gfwadj are functions of Stal, Cww, and Gfw but the function coefficients varied from year to year depending on the interval between shearings. We are going to keep things simple and only use the present section for some of the more unusual calculated traits.
+
+
+\subsection{Statistical techniques}
+\label{sect:stats}
+The initial step in analysing these data was to fit a mixed model which adjusted for appropriate fixed effects and estimated additive genetic, environmental, and phenotypic variance/covariance components. This was followed by multivariate analysis of the additive genetic variance/covariance matrix with the goal of underatanding what dimensions of genetic variation were operating in the wool and skin trait spaces. 
+
+An attempt was made to incorporate knowledge from a model of skin development in to these quantitative genetic analyses.
+
+A search was made for nonlinear behaviour in the relationships between traits.
+An attempt was made to estimate genetic parametes separately for various subgroups of the data to see if parameters were heterogeneous.
+
+\subsubsection{Mixed model fitting}
+The software used for mixed model fitting and estimation of variance components and genetic parameters is known as {\em dmm}. {\em dmm} is free software available under the GPL licence from the CRAN repository. {\em dmm} runs as a package under the R statistical language~\cite{rprog:13}. {\em dmm} has a comprehensive user's guide (Jackson(2015)~\cite{jack:15b}) which covers the statistical theory used for estimation and a set of worked examples.
+
+Variance component estimation is one of the most difficult areas of statistics. It is comprehensively documented by Searle et al (1992)~\cite{sear:92}. The procedure which current wisdom seems to consider most appropriate is called REML. The procedures used by {\em dmm} are MINQUE and bias-corrected-ML. In most cases where data are not extremely unbalanced, there is very little difference between procedures.  For the current task, {\em dmm} is most suited, because it handles multiple traits with unequal replication, because it estimates both variance/covariance components and genetic parameters arising therefrom, because it allows estimation of maternal as well as individual genetic and environmental variance components and the covariances between them.  {\em dmm} makes extensive use of procedures developed by Wolak(2014)~\cite{wola:14} for computing additive and non-additive relationship matrices .
+
+The procedure followed by {\em dmm} is heirarchical. We first fit a model for fixed effects modelling observations on individual sheep as follows
+
+\begin{equation}
+\label{model:fixed}
+Y_{ijk} = \mu + Sex_{i} + YearbixLine_{j} + r_{ijk}
+\end{equation}
+
+where
+\begin{description}
+\item[$Y_{ijk}$] is an observation on the kth individual of the ith Sex and the jth Year of birth x Line combination
+\item[$\mu$] is an overall mean of the observations
+\item[$Sex_{i}$] is an effect due to the ith Sex
+\item[$YearbixLine_{j}$] is an effect due to the jth combination of Year of birth and Line
+\item[$r_{ijk}$] is a residual deviation for the kth individual of the ith Sex and the jth Year of birth x Line combination
+\end{description}
+
+Equation~\ref{model:fixed} is stated as a univariate model for simplicity. It can, of course be fitted to each of a set of traits. The residual deviations from model~\ref{model:fixed} represent the observations {\em adjusted for} the fixed effect.
+
+The next step is to fit a dyadic model to the residuals from model~\ref{model:fixed}. A dyad is a pair of individuals. A dyadic model is a model for the covariances between the residuals for pairs of individuals. The dyadic model attempts to fit various genetic and environmental variance/covariance components to the covariances between the residuals for each dyad. In the present case we first attempt an elementary partitioning of the dyadic covariances into additive genetic and environmental variance/covariance components. The dyadic model for this simple case can be written
+
+\begin{equation}
+\label{model:dyadic}
+Cov(r_{k},r_{k^{`}}) = A_{kk^{`}} VarG(Ia) + E_{kk^{`}} VarE(I) + \Delta_{kk^{`}}
+\end{equation}
+
+where
+\begin{description}
+\item[$Cov(r_{k},r_{k^{`}})$] is the covariance of the kth and $k^{`}$th residuals from the fitting of model~\ref{model:fixed}
+\item[$A_{kk^{`}}$] is the $kk^{`}$th element of the additive genetic relationship matrix, that is the relationship coefficient between the kth and $k^{`}$th individuals
+\item[$VarG(Ia)$] is the individualadditive genetic variance
+\item[$E_{kk^{`}}$] is the $kk^{`}$th element of the environmental relationship matrix which is usually assumed to be an identity matrix
+\item[$VarE(I)$] is the individual environmental variance
+\item[$\Delta_{kk^{`}}$] is the $k^{`}$th residual for the dyadic model~\ref{model:dyadic}
+\end{description}
+
+Again, equation~\ref{model:dyadic} is stated as a univariate model for simplicity, and only the most elementary partitioning into $VarG(Ia)$ and $VarE(I)$ is presented. There is a full exposition in Jackson(2015)~\cite{jack:15b}. 
+
+ The dyadic model~\ref{model:dyadic} represents a set of equations which can be solved by ordinary least squares regression techniques to yield estimates of $VarG(Ia)$  and $VarE(I)$. This yields MINQUE estimates for the two variance components. Given these estimates we can then go back to the monadic model~\ref{model:fixed} and obtain GLS estimates of the fixed effects and residuals. If we then use the GLS residuals in the dyadic model~\ref{model:dyadic} we obtain bias-corrected-ML estimates for the two variance components. There is a full presentation of variance component estimation in Jackson(2015)~\cite{jack:15b}.
+
+Given variance component estimates we can readily transform each component to a heritability (if it is univariate) or to a genetic(or environmental) correlation (if it is a between trait covariance component). These transforms, and the accompanying standard error estimates, are fully covered in Jackson(2015)~\cite{jack:15b}
+
+Because of the complication of different numbers of replicates for each trait and each pair of traits it was necessary to perform the model fitting part of the analysis separately for each pair of traits, except that some economy was obtained by blocking together sets of traits for which the replication was almost identical. The blockings used for the measured traits of Tables~\ref{tab:counts1} to ~\ref{tab:counts5} were as follows
+\begin{description}
+\item[Block1] "Stal" "Diam" "Bwt"
+\item[Block2] "WrN"  "WrB"  "WrT"  "Face"
+\item[Block3] "Gfw" "Yld" "Cww"
+\item[Block4] "Staladj" "Gfwadj"  "Cwwadj"
+\item[Block5] "Crimp"
+\item[Block6] "Dp"     "Ds"     "Dps"    "DpovDs" "CVDp"   "CVDs"   "MaxDp"  "MinDp""MaxDs"  "MinDs"  "SDDp"   "SDDs"   "SDD"    "CVD"    "Gt30Dp" "Gt30Ds" "Gt30D"
+\item[Block7] "Fnua"  "Fr"    "Fnt"   "Sarea"
+\item[Block8] "Fd" "Fc" "Fu"
+\item[Block9] "Colour" "Fly"    "Flcrot"
+\item[Block10] "Bactst" "MycD"
+\item[Block11] "Bcts"   "Bctb"   "Weanwt"
+\item[Block12] "NLB" "NLW" 
+\end{description} 
+Note that two traits, Birwt and WeanGfw, have been omitted because of small subclass numbers in pairings with the Block6 traits. The blocking is based on similarity of subclass numbers and in some cases where the replication was high it was necessary to reduce the number of traits per block to conserve computer memory. The blocking is merely a computational device. The fixed effect model had to contain the same effects for every pair of blocks, but the number of levels of each effect could vary between block pairs.
+
+After obtaining the variance component estimates and genetic parameters for each pair of blocks, it was necesary to condense these 144 sets of estimates back into a single genetic covariance matrix estimate ( and a single genetic correlation matrix estimate). There is no guarantee that the 48 x 48 matrices thus obtained are positive definite, even though the 12 x 12 blocks which make then up are individually positive definite. This was therefore checked and if required an iterative amendment made using the R routine {\em nearPD()} which is available in the {\em Matrix} package.
+
+When the 'calculated'  traits were added the number of blocks was extended as required. For the 'calculated' traits, those related to crimp (Crwvl, Crst, Crstadj, Crwvt) were added to Block 5, and the primary and secondary density traits (Fnpua, Fnsua, Fnpt, Fnst) were made Block 13.
+
+\subsubsection{Genetic models}
+The simple partitioning of phenotypic (co)variances into additive genetic and environmental (co)variances given in equation~\ref{model:dyadic} is almost always the starting point for quantitative genetic analysis. It should be noted that just beacuse a considerable proportion of the phenotypic (co)variancees come out as additive genetic does not mean that most of the gene effects have to be additive. Dominance and epistatic gene effects also generate some additive genetic variance. 
+
+
+\section{Results}
+
+\subsection{Fixed effects}
+Model~\ref{model:fixed} was fitted to all 56 measured traits. The resulting estimates of fixed effects are reported as fitted constants in Tables~\ref{tab:b1} to ~\ref{tab:b7}.
+\input{tab.b1.tex}
+\input{tab.b2.tex}
+\input{tab.b3.tex}
+\input{tab.b4.tex}
+\input{tab.b5.tex}
+\input{tab.b6.tex}
+\input{tab.b7.tex}
+ The constants are fitted as contrasts defined to sum to zero over all the levels of each effect. Hence the notation {\em C(Sex, sum)1} refers to the level coded as 1 for a contrast named {\em Sex}, ie rams. The level coded as 2 ( ie ewes) is not reported as its effect is equal to minus the ram effect (because they sum to zero).
+
+The mean is reported as {\em (Intercept)}. If one wants the mean for rams one simply adds the {\em C(Sex, sum)1} effect to the {\em (Intercept)}, ie to the mean.
+
+The effect reported as {\em C(YbxLi, sum)yyl} refers to combinations of {\em Year born in} (yy) and {\em Line} (l).  Year born in (yy) ranges from 74 to 85 ( meaning 1974 to 1985). Line (l) is as follows
+\begin{description}
+\item[0] unselected base animals ( years 74 and 75 only)
+\item[1] selection line 1, selected for high follicle depth
+\item[2] selection line 2, selected for large number of follicles per head
+\item[3] selection line 3, selected for both large follicle depth and high number of follicles per head
+\item[4] unselected control line
+\end{description}
+
+These {\em C(YbxLi, sum)yyl} effects allow calculation of differences between selected and control lines within a particular year, simply by differencing the appropriate constants. For example we can get the difference between Line 3 and Control in 1985 as {\em C(YbxLi, sum)853} - {\em C(YbxLi, sum)859} for any any trait. 
+
+The standard errors of the above constant estimates are reported in Tables~\ref{tab:seb1} to ~\ref{tab:seb7}.
+
+\input{tab.seb1.tex}
+\input{tab.seb2.tex}
+\input{tab.seb3.tex}
+\input{tab.seb4.tex}
+\input{tab.seb5.tex}
+\input{tab.seb6.tex}
+\input{tab.seb7.tex}
+If one calculates some linear combination of the constants, the standard error of the combination can be approximated as the geometric mean of the standard errors of the constants involved. This is approximate as it does not allow for any covariances between the constants due to unequal subclass numbers. These covariances are available, but are not reported here.
+
+\subsection{Direct responses to selection}
+For each of the traits selected for (Fnt and Fd),   we plotted fixed effects for each Year-of-birth for the selected line and the control line. The difference between selected and control lines represents the amount of genetic change.  This is a very elementary way of analysing response to selection in sheep flocks with overlapping generations. It shows what has happened to successive drops of animals. Figure~\ref{fig:dgl1} shows the direct response plot for Line 1 and the control line.
+
+\input{fig.dgl1.tex}
+
+ Line 1 starts out with a smaller Fd than the Control Line, but changes from 1979 onward to having a larger Fd than the Control Line. There are a lot of data points missing. I am still waiting for CSIRO to complete the Fd measurements on Line 1 in 1984-85 and on the Control Line in 1981-85. Nevertheless we can conclude that there has been genetic change in Fd in Line 1 due to selection for Fd.
+
+Figure~\ref{fig:dgl2} shows the direct response plot for Line 2 and the Control Line.
+
+\input{fig.dgl2.tex}
+Line 2 starts out with a larger number of follicles than the Control Line, and this difference increases with time. We can conclude that there has been genetic change in Fnt in Line 2 due to selection for Fnt. There is also a considerable environmental shift between years 80 and 82, both Line 2 and the Control Line have increased follicle numnber and this jump is manintained thereafter. The cause of this jump is unknown. It may be significant that there was a change of techniwue from manual counting to semi-automatic image processing in 1982.
+
+Figure~\ref{fig:dgl3fd} shows the direct response plot for follicle depth for Line 3 and the Control Line. Figure~\ref{fig:dgl3fnt} shows the direct response plot for follicle number per head for Line 3 and the Control Line.
+
+\input{fig.dgl3fd.tex}
+\input{fig.dgl3fnt.tex}
+
+Line 3 has achieved genetic change in both follicle depth and follicle number per head. The shift in follicle number between years 80 and 82 is again present. 
+
+\subsection{Indirect responses to selection}
+We will just look at indirect responses in clean wool weight, fibre diameter and staple length.
+
+Figure~\ref{fig:dgcww} shows the indirect or correlated changes in clean wool weight ({\em Cwwadj}) in all three lines. There is no obvious change in clean wool weight in any of the three lines. There is a slight suggestion that the selected line might average out above the control line in both Line 2 and Line 3. This is not what was expected. The original thinking behind this experiment was that if one wanted to engineer a change in wool weight one had to put selection pressure on all of its components. The components of wool weight in this scenario were considred to be follicle size ( measured as follicle depth) and number of follicles ( measured as follicle number per head). It was expected that there would be a change in wool weight in Line 3 only. This did not occur. Possible explanations are
+\begin{itemize}
+\item the experiment did not continue for long enough
+\item the two components ( follicle size and number) are in some way not an adequate representation of the biology of wool growth
+\item the concept of components is somehow flawed
+\end{itemize}
+
+\input{fig.dgcww.tex}
+We can look into this a little more thoroughly by seeing if there were any correlated changes in fibre diameter or in fibre length growth rate ( measured as staple length).
+
+Figure~\ref{fig:dgdiam} and Figure~\ref{fig:dgstal} show the correlated changes in average fibre diameter and staple length.
+
+\input{fig.dgstal.tex}
+\input{fig.dgdiam.tex}
+There are no obvious correlated changes in staple length or fibre diameter in any of the 3 lines. There is a slight suggestion that staple length might average out higher than the Control line in Lines 2 and 3, as was observeed for clean wool weight. It is becoming clear that the experiment simply did not continue for enough years for correlated responses to be studied. Correlated genetic change is almost always smaller than direct responses to selection, and will therefore take more generations to detect. 
+
+In view of the above, the experiment was simply not carried on for long enough to fulfil its original aim. The hypothesis that one can 'engineer' a genetic improvement in wool weight by changing its components in a coordinated way, is still open. A more detailed analysis of responses against amount of selection applied, is not warranted, and would be difficult to carry out because of the missing observations.
+
+The experiment does however provide an important pedigreed data set with some interesting measurements not available elsewhere. We now proceed to an analysis of the pedigree data.
+
+\clearpage
+\subsection{Parameters}
+It is important to present phenotypic as well as genetic parameters. They are required in calculating responses to selection. Heritabilities and genetic correlations alone are not suffficient.
+
+\subsubsection{Phenotypic variances}
+Phenotypic variances and their standard errors are presented in Table~\ref{tab:pvar}
+\input{tabpvar.tex}
+The columns CI95lo and CI95hi represent the lower and upper limits of a 95 per
+cent confidence interval for the variance estimate.
+
+\subsubsection{Correlations}
+Phenotypic, genetic and environmental correlations for each pair of traits are presented in Table~\ref{tab:corr}
+\input{tabcorr.tex}
+The symbols E(I), G(Ia), and P(I) in the components column indicate whether the correlation is environmental, additive genetic, or phenotypic. The symbol (I) is there to indicate that these correlations are based on variation of effects operating in individuals, not effects of maternal genes or maternal environment. There were no maternal genetic or environmental components fitted in this analysis. The columns CI95lo and CI95hi represent the lower and upper limits of a 95 percent confidence interval for the correlation estimate. The column labelled Estimate is a point estimate and should be at the center of the confidence limits.
+
+ This is a huge table occupying 219 pages. It is considered important to have the environmental, genetic and phenotypic estimates presented side-by-side. It represents three correlation matrices of order 56. These are of course symmetric, but we present all traitpairs for each trait so there is duplication. For example you can find Stal:Bwt and also Bwt:Stal, and the estimates will be the same.
+
+We will just take note of a few interesting cases
+\begin{itemize}
+\item the genetic correlation between Dp and Ds is effectively zero, but the environmental correlation is strong positive. It seems environmental factors affect all fibres equally, but genetic factors act independently on primary and secondary follicles.
+\item the genetic correlation between Dp and Cww is effectively zero, but the genetic correlation between Ds and Cww is high. Similarly the genetic correlation between SDDp and Cww is near zero and the genetic correlation between SDDs and Cww is medium. Selection for Cww will increase the mean and SD of diameter, but it will come from the secondary fibres, not the primaries.
+\item follicle curvature has a negative genetic correlation with Dp and a strong positive genetic corelation with Ds.
+\item birthcoat hairines has a stong positive genetic corelation with Dp and a weak negative genetic correlation with Ds
+\end{itemize}
+
+
+
+\subsubsection{Proportion of phenotypic variance due to each component}
+We calculate the proportion of variance for both the environmental and additive genetic components. These are presented in Table~\ref{tab:herit}. The additive genetic component, as a proportion, is conventionally referred to as heritability.
+\input{tabherit.tex}
+Most measured wool traits have a heritability of between 0.35 and 0.5. There is an exceptional estimate for crimp frequency ( 0.97) and this will have to be investigated as the heritability of follicle curvature  (Fc) is much lower (0.63). The heritability estimates for Fnua and Fr are slightly low at around 0.3. The scores (Colour, Fly, Flcrot, Bactst, MycD) have low heritabilities, and this reflects the low incidences for these traits. Birthcoat hairiness ( Bcts and Bctb) is highly heritable. Twinning (NLB and NLW) is around 0.2 for heritability.
+
+
+\section{Discussion}
+It should be clear from the correlations ( especially those commented on in the results section) that the diameters of primary and secondary fibres are under independent genetic control. This should not be surprising. The large changes in Dp without much change in Ds which have occurred during Merino evolution (Jackson (2017)~\cite{jack:17}) indicate that this must be the case.
+
+As a selection experiment, the AB32 flock leaves a lot to be desired. The data are too incomplete for a proper analysis, and the initial choice of Fd as a selection criterion for 'large vigorous follicles' was a misjudgement, as its measurement technique is flawed as indicated by its low heritability ( 17 percent). What we can recover from this experiment is a very valuable dataset of measurements on primary and secondary fibres.
+
+The data from visual scores of flystrike, fleece rot, etc, need to be used with caution. The incidence of these phenomena was low. 
+
+The traits NLB and NLW can be regarded as the reproduction rate component of fitness. So correlations with other traits indicate which traits are associated with fitness. The interesting  genetic correlations are 0.41 with Dp and -0.16 with Ds. In other words the 'fittest ' sheep have coarse primaries and fine secondaries - like wild sheep. We have no data on the 'survival' component of fitness, but the correlations with birthcoat score might be considered indicitive, on the presumption that hairy birthcoat lambs survive better. Most deaths in domestic sheep are in lambs before weaning. We have no data on longevity or adult deaths.
+
+\begin{thebibliography}{99}
+
+\bibitem{chap:65}
+Chapman, R.E. (1965) The ovine arrector pili musculature and crimp formation 
+    in wool. In "Biology of the Skin and Hair Growth" Angus and Robertson,
+    Sydney, Ed. A.G. Lyne and B.F. Short. pp 201-232
+
+\bibitem{hori:53}
+Horio, M. and Kondo, T. (1953) Text. Res. J. 23:373
+
+\bibitem{jack:75}
+Jackson, N., Nay T. and Turner, Helen Newton (1975) Response to selection
+    in Australian Merino sheep. VII Phenotypic and genetic parameters for
+    some wool follicle characteristics and their correlation with wool and
+    body traits. Aust. J. Agric. Res. 26:937-57
+
+\bibitem{jack:15}
+Jackson, N. and Watts, J.E. (2016) Staple crimp formation in the fleece of Merino sheep. 
+Report available from the authors as a pdf document.
+
+\bibitem{jack:16a}
+Jackson, N.  and Watts J.E. (2016) Can we predict intrinsic fibre curvature from follicle curvature score? Report available from the author as a pdf document.
+
+\bibitem{jack:15b}
+Jackson, N. (2015) An Overview of the R package dmm.
+    From http://cran.r-project.org/package=dmm
+    Or https://github.com/cran/dmm
+
+\bibitem{jack:86}
+Jackson, N. Lax, J. and Wilson, R.L.(1986) Sex and selection for fleece weight in Merino sheep. Zeitschrift fur Tierzuchtung und Zuchtungsbiologie. Bd. 103:97-115
+
+\bibitem{jack:17}
+Jackson, N. (2017) Wj=hat are the defining characteristics of a primitive sheep relative to a modern Merino sheep? https://github.com/nevillejackson/atavistic-sheep/tree/master/mev-rewrite/supplementary/primitive/primitive.pdf
+
+\bibitem{moor:89}
+Moore, G.P.M, Jackson, N. and Lax, J. (1989) Evidence of a unique developmental mechanism specifting follicle density and fibre size in sheep selecterd for single skin and fleece characters. Genetical Reaearch. 53:57-62
+
+\bibitem{nago:81}
+Nagorcka, B.N. (1981) Theoretical mechanism for crimp.
+     Aust J. Biol. Sci. 34: 189-209
+
+\bibitem{onio:62}
+Onions, W.J. (1962) Wool: an introduction to its properties, varieties, uses
+     and production. Ernest Benn limited, London, 1962
+
+\bibitem{rend:78}
+Rendel, J.M. and Nay, T. (1978) Selection for high and low ratio and high 
+    and low primary density in Merino sheep. 
+    Aust. J. Agric. Res. 29:1077-86
+
+\bibitem{rprog:13}
+R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  ISBN 3-900051-07-0, URL http://www.R-project.org/.
+
+\bibitem{sear:92}
+Searle, S.R., Casella, G., and McCullock, C.E. (1992) Variance Components.
+    John Wiley and Sons, New York.
+
+
+\bibitem{swan:93}
+Swan, P.G. (1993) Objective measurement of fibre crimp curvature and the bulk compressional properties of Australian wools. PhD Thesis, University of NSW, March 1993 
+
+\bibitem{wats:77}
+Watson, N., Jackson, N. and Whiteley, K.J. (1977) Inheritance of the resistance
+    to compression property of Austrailian Merino wool and its genetic 
+    correlation with follicle curvature and various wool and body 
+    characters. Aust. J. Agric. Res. 28:1083-94
+
+\bibitem{wola:14}
+Wolak, M.E. (2014) nadiv: an R package to create relatedness matrices for
+    estimating non-additive genetic variances in animal models.
+    Methods in Ecology and Evolution 3:792-796.
+
+\end{thebibliography}
+
+%\input{tab.seb1.tex}
+%\input{tab.seb2.tex}
+%\input{tab.seb3.tex}
+%\input{tab.seb4.tex}
+%\input{tab.seb5.tex}
+%\input{tab.seb6.tex}
+%\input{tab.seb7.tex}
+
+\end{document}
+

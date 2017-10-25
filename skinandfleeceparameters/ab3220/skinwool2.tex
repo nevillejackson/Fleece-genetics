@@ -1,5 +1,5 @@
 %
-% Draft  document skinwool.tex
+% Draft  document skinwool2.tex
 % Notes on genetic analysis of ab32 and ab20 skin and wool data
 %
  
@@ -9,9 +9,9 @@
 \usepackage{textcomp}
  
 
-\title{ Genetic relationship between skin and wool traits in Merino sheep}
+\title{ Genetic relationship between skin and wool traits in Merino sheep. Part 2. Multivariate analysis of genetic (co)variation.}
 \author{Neville Jackson }
-\date{27 Oct 2015} 
+\date{25 Oct 2017} 
 
  
 \begin{document} 
@@ -60,6 +60,10 @@ The objectives of this study  are diverse and probably overambitious. Briefly we
 \end{itemize}
 One of the benefits of setting out such a broad objective is that the areas where we fail become indicators of future research directions.
 
+Part I of this document deals with only the first two goals - describing responses to selection in the three selected lines, and presenting estimates of additive genetic parameters for 56 skin and wool characteristics.
+
+Part II will deal with multivariate analyses of additive genetic covariation.
+
 \section{Materials and methods}
 The sheep and the measurements thereon included in this study represent a substantial investment of CSIRO resources over 11 years of a breeding trial and several more years of laboratory measurement work. Unfortunately the experiment was terminated abruptly by a political decision and was never properly analysed or published. What we have, for the present study, is a set of measurements exhibiting various degrees of incompleteness. The present analysis is therefore somewhat complicated and the results may be affected by the severe imbalance with respect to some traits.
 
@@ -107,37 +111,6 @@ The traits calculated in this way are defined in Table~\ref{tab:caltraits}.
  
 Some of the traits classed as measurements and included in the previous section should, if one wishes to be pedantic, be included here. Examples are Sarea, Fnt, and Cww. Also Staladj, Cwwadj, and Gfwadj are functions of Stal, Cww, and Gfw but the function coefficients varied from year to year depending on the interval between shearings. We are going to keep things simple and only use the present section for some of the more unusual calculated traits.
 
-\subsubsection{Traits predicted from measured traits using an empirical relationship obtained from a statistical fit of a model to external data}
-There are two predictions of interest here
-\begin{itemize}
-\item Standard deviation of follicle depth (SDFd) predicted from follicle unevenness score
-\item Intrinsic radius of fibre curvature (IRad) predicted from follicle curvature score
-\end{itemize}
-The empicical prediction equations for SDFd and IRad are
-\begin{eqnarray}
-SDFd & = &  -0.4874 + 1.8282(Fu) \\
-ICurv & = & 0.22447 + 0.25223(Fc) \\ 
-IRad & = &  \frac{1}{(ICurv)}
-\end{eqnarray}
-Notice that predicting IRad is a 2 step procedure, we first predict ICurv, then calculate a reciprocal transformation to get IRad.
-
-In the case of SDFd ...
-
-In the case of $IRad$ there are a number of traits which we can calculate from IRad and crimp wavelength (Crwvl) based on the model for crimp formation in staples developed by Jackson and Watts(2015)~\cite{jack:15}. The relevant equations, assuming a stretched helix model for staple crimp formation, are
-\begin{eqnarray}
-Crampl & = & \sqrt{(Irad)^{2} - \left(\frac{Crwvl}{2\pi}\right)^{2} } \\
-\frac{L_{f}}{L_{s}} & = & \frac{2 \pi Irad}{Crampl} \\
-L_{f} & = & L_{s} \left( \frac{L_{f}}{L_{s}} \right)
-\end{eqnarray}
-These equations and the development of the method of predicting Irad from Fc are described in Jackson and Watts(2016)~\cite{jack:16a}.
-
-A complete list of predicted traits and traits derived from predicted traits is given in Table~\ref{tab:pred}.
-
-\input{table8.tex}
-
-\subsubsection{Traits predicted from a model describing skin development}
-
-\subsubsection{Traits introduced to accomodate nonlinearity}
 
 \subsection{Statistical techniques}
 \label{sect:stats}
@@ -218,13 +191,6 @@ When the 'calculated' and 'predicted' traits were added the number of blocks was
 \subsubsection{Genetic models}
 The simple partitioning of phenotypic (co)variances into additive genetic and environmental (co)variances given in equation~\ref{model:dyadic} is almost always the starting point for quantitative genetic analysis. It should be noted that just beacuse a considerable proportion of the phenotypic (co)variancees come out as additive genetic does not mean that most of the gene effects have to be additive. Dominance and epistatic gene effects also generate some additive genetic variance. 
 
-Dominance and epistatic (co)variances can be estimated where the data are adequate. In the present case the data probably do not have sufficient closely related animals in the pedigree to permit estimation of nonadditive genetic (co)variances. We shall check, but I am not optimistic.
-
-It is possible to consider a model where the individual's phenotype is made up of individual additive genetic and individual environmental components from its own genes plus maternal additive genetic and maternal environmental components from its mother's genes and its mother's environment. This leads to four components of variance, and to maternal additive genetic correlations as well as individual additive genetic correlations. Such maternal effects tend to occur where the trait is obviously influenced by the mother ( eg Birth weight of a lamb is influenced by its own genes and by its mother's genes). This could easily be the case for skin development so maternal inheritance has to be investigated. The {\em dmm} software can analyse maternal inheritance and its Users Guide (Jackson(2015)~\cite{jack:15b} contains a full presentation of the genetic theory and some worked examples. Again, the data must have adequate pedigree relationships to permit maternal genetic analysis.
-
-It is possible that some of the genes affecting skin and wool traits are on the X chromasome. The {\em dmm} software can partition genetic (co)variances into autosomal and sex-linked. There is evidence in one of the example analyses in Jackson(2015)~\cite{jack:15b} that some wool traits have sex-linked inheritance. This has consequences for selection procedures since selected rams to not pass their sexlinked genes to male offspring, so the male-to-male pathway of improvement does not operate. Again there are pedigree requirements for the data to be adequate for estimation of sexlinked components.
-
-Genetic parameters are not necessarily the same in all populations. There is some evidence that parameters for wool traits are sex-specific (Jackson et al(1986)~\cite{jack:86}, and they are almost certainly age-specific. They may also differ between single-born and twin-born animals and this is behind the decision to include {\em NLB} and {\em NLW} as traits rather than as fixed effects. Fitting a fixed effect which is partly genetic may remove or distort genetic variation for other traits. The present data may not be adequate to examine any of these heterogeneities.
 
 \subsubsection{Multivariate analysis}
 The initial approach was to simply look at the dimensionality of the genetic trait space using principal component analysis. The size and shape of the additive genetic trait space is given by the additive genetic covariance matrix. A large covariance matrix is not an easy object to comprehend. To help with this one can reduce the marix to {\em cononical form} which simply means finding the directions in which genetic variation is greatest, and the directions in which genetic variation is small. The technique for doing this on a single covariance matrix is known as principal components analysis.
@@ -262,112 +228,10 @@ The traits included in each group were as follows
 %\subsubsubsection{Principal component analysis}
 %\subsubsubsection{Canonical regression analysis}
 
-\subsubsection{Nonlinearities}
-
-\subsubsection{Genetic parameter shifts}
-
-\subsection{Quantitative genetic theory}
 
 \section{Results}
 
-\subsection{Fixed effects}
-Model~\ref{model:fixed} was fitted to all 56 measured traits. The resulting estimates of fixed effects are reported as fitted constants in Tables~\ref{tab:b1} to ~\ref{tab:b7}.
-\input{tab.b1.tex}
-\input{tab.b2.tex}
-\input{tab.b3.tex}
-\input{tab.b4.tex}
-\input{tab.b5.tex}
-\input{tab.b6.tex}
-\input{tab.b7.tex}
- The constants are fitted as contrasts defined to sum to zero over all the levels of each effect. Hence the notation {\em C(Sex, sum)1} refers to the level coded as 1 for a contrast named {\em Sex}, ie rams. The level coded as 2 ( ie ewes) is not reported as its effect is equal to minus the ram effect (because they sum to zero).
-
-The mean is reported as {\em (Intercept)}. If one wants the mean for rams one simply adds the {\em C(Sex, sum)1} effect to the {\em (Intercept)}, ie to the mean.
-
-The effect reported as {\em C(YbxLi, sum)yyl} refers to combinations of {\em Year born in} (yy) and {\em Line} (l).  Year born in (yy) ranges from 74 to 85 ( meaning 1974 to 1985). Line (l) is as follows
-\begin{description}
-\item[0] unselected base animals ( years 74 and 75 only)
-\item[1] selection line 1, selected for high follicle depth
-\item[2] selection line 2, selected for large number of follicles per head
-\item[3] selection line 3, selected for both large follicle depth and high number of follicles per head
-\item[4] unselected control line
-\end{description}
-
-These {\em C(YbxLi, sum)yyl} effects allow calculation of differences between selected and control lines within a particular year, simply by differencing the appropriate constants. For example we can get the difference between Line 3 and Control in 1985 as {\em C(YbxLi, sum)853} - {\em C(YbxLi, sum)859} for any any trait. 
-
-The standard errors of the above constant estimates are reported in Tables~\ref{tab:seb1} to ~\ref{tab:seb7}.
-
-\input{tab.seb1.tex}
-\input{tab.seb2.tex}
-\input{tab.seb3.tex}
-\input{tab.seb4.tex}
-\input{tab.seb5.tex}
-\input{tab.seb6.tex}
-\input{tab.seb7.tex}
-If one calculates some linear combination of the constants, the standard error of the combination can be approximated as the geometric mean of the standard errors of the constants involved. This is approximate as it does not allow for any covariances between the constants due to unequal subclass numbers. These covariances are available, but are not reported here.
-
-\subsection{Direct responses to selection}
-For each of the traits selected for (Fnt and Fd),   we plotted fixed effects for each Year-of-birth for the selected line and the control line. The difference between selected and control lines represents the amount of genetic change.  This is a very elementary way of analysing response to selection in sheep flocks with overlapping generations. It shows what has happened to successive drops of animals. Figure~\ref{fig:dgl1} shows the direct response plot for Line 1 and the control line.
-
-\input{fig.dgl1.tex}
-
- Line 1 starts out with a smaller Fd than the Control Line, but changes from 1979 onward to having a larger Fd than the Control Line. There are a lot of data points missing. I am still waiting for CSIRO to complete the Fd measurements on Line 1 in 1984-85 and on the Control Line in 1981-85. Nevertheless we can conclude that there has been genetic change in Fd in Line 1 due to selection for Fd.
-
-Figure~\ref{fig:dgl2} shows the direct response plot for Line 2 and the Control Line.
-
-\input{fig.dgl2.tex}
-Line 2 starts out with a larger number of follicles than the Control Line, and this difference increases with time. We can conclude that there has been genetic change in Fnt in Line 2 due to selection for Fnt. There is also a considerable environmental shift between years 80 and 82, both Line 2 and the Control Line have increased follicle numnber and this jump is manintained thereafter. The cause of this jump is unknown. It may be significant that there was a change of techniwue from manual counting to semi-automatic image processing in 1982.
-
-Figure~\ref{fig:dgl3fd} shows the direct response plot for follicle depth for Line 3 and the Control Line. Figure~\ref{fig:dgl3fnt} shows the direct response plot for follicle number per head for Line 3 and the Control Line.
-
-\input{fig.dgl3fd.tex}
-\input{fig.dgl3fnt.tex}
-
-Line 3 has achieved genetic change in both follicle depth and follicle number per head. The shift in follicle number between years 80 and 82 is again present. 
-
-\subsection{Indirect responses to selection}
-We will just look at indirect responses in clean wool weight, fibre diameter and staple length.
-
-Figure~\ref{fig:dgcww} shows the indirect or correlated changes in clean wool weight ({\em Cwwadj}) in all three lines. There is no obvious change in clean wool weight in any of the three lines. There is a slight suggestion that the selected line might average out above the control line in both Line 2 and Line 3. This is not what was expected. The original thinking behind this experiment was that if one wanted to engineer a change in wool weight one had to put selection pressure on all of its components. The components of wool weight in this scenario were considred to be follicle size ( measured as follicle depth) and number of follicles ( measured as follicle number per head). It was expected that there would be a change in wool weight in Line 3 only. This did not occur. Possible explanations are
-\begin{itemize}
-\item the experiment did not continue for long enough
-\item the two components ( follicle size and number) are in some way not an adequate representation of the biology of wool growth
-\item the concept of components is somehow flawed
-\end{itemize}
-
-\input{fig.dgcww.tex}
-We can look into this a little more thoroughly by seeing if there were any correlated changes in fibre diameter or in fibre length growth rate ( measured as staple length).
-
-Figure~\ref{fig:dgdiam} and Figure~\ref{fig:dgstal} show the correlated changes in average fibre diameter and staple length.
-
-\input{fig.dgstal.tex}
-\input{fig.dgdiam.tex}
-There are no obvious correlated changes in staple length or fibre diameter in any of the 3 lines. There is a slight suggestion that staple length might average out higher than the Control line in Lines 2 and 3, as was observeed for clean wool weight. It is becoming clear that the experiment simply did not continue for enough years for correlated responses to be studied. Correlated genetic change is almost always smaller than direct responses to selection, and will therefore take more generations to detect. 
-
-In view of the above, the experiment was simply not carried on for long enough to fulfil its original aim. The hypothesis that one can 'engineer' a genetic improvement in wool weight by changing its components in a coordinated way, is still open. A more detailed analysis of responses against amount of selection applied, is not warranted, and would be difficult to carry out because of the missing observations.
-
-The experiment does however provide an important pedigreed data set with some interesting measurements not available elsewhere. We now proceed to an analysis of the pedigree data.
-
-\clearpage
-\subsection{Parameters}
-It is important to present phenotypic as well as genetic parameters. They are required in calculating responses to selection. Heritabilities and genetic correlations alone are not suffficient.
-
-\subsubsection{Phenotypic variances}
-Phenotypic variances and their standard errors are presented in Table~\ref{tab:pvar}
-\input{tabpvar.tex}
-The columns CI95lo and CI95hi represent the lower and upper limits of a 95 per
-cent confidence interval for the variance estimate.
-
-\subsubsection{Correlations}
-Phenotypic, genetic and environmental correlations for each pair of traits are presented in Table~\ref{tab:corr}
-\input{tabcorr.tex}
-The symbols E(I), G(Ia), and P(I) in the components column indicate whether the correlation is environmental, additive genetic, or phenotypic. The symbol (I) is there to indicate that these correlations are based on variation of effects operating in individuals, not effects of maternal genes or maternal environment. There were no maternal genetic or environmental components fitted in this analysis. The columns CI95lo and CI95hi represent the lower and upper limits of a 95 percent confidence interval for the correlation estimate. The column labelled Estimate is a point estimate and should be at the center of the confidence limits.
-
- This is a huge table occupying 219 pages. It is considered important to have the environmental, genetic and phenotypic estimates presented side-by-side. It represents three correlation matrices of order 56. These are of course symmetric, but we present all traitpairs for each trait so there is duplication. For example you can find Stal:Bwt and also Bwt:Stal, and the estimates will be the same.
-
-\subsubsection{Proportion of phenotypic variance due to each component}
-We calculate the proportion of variance for both the environmental and additive genetic components. These are presented in Table~\ref{tab:herit}. The additive genetic component, as a proportion, is conventionally referred to as heritability.
-\input{tabherit.tex}
-Most measured wool traits have a heritability of between 0.35 and 0.5. There is an exceptional estimate for crimp frequency ( 0.97) and this will have to be investigated as the heritability of follicle curvature  (Fc) is much lower (0.63). The heritability estimates for Fnua and Fr are slightly low at around 0.3. The scores (Colour, Fly, Flcrot, Bactst, MycD) have low heritabilities, and this reflects the low incidences for these traits. Birthcoat hairiness ( Bcts and Bctb) is highly heritable. Twinning (NLB and NLW) is around 0.2 for heritability.
+The interpretability of results from a multivariate analysis is critically dependent on the choice of traits to be included. We start with the three groups of traits termed Fleece observations, Skin observations, and Fibre traits, in the methods section above.
 
 \subsection{Multivariate analysis}
 
