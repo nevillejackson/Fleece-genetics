@@ -205,7 +205,7 @@ Why was the adjustment using Dp succesful in removing epistatic variance? Well D
 \subsection{Omitted variable bias}
 Variance component analyses are not straightforward. In a mixed model, when partitioning the phenotypic variance into components, one needs to be extremely careful that one does not omit some component that is both large and significant. To do so would bias the estimates for all components. One can see this by comparing Tables~\ref{tab:model1} and ~\ref{tab:model4c} from the Results section. When only VarE(I) and VarG(Ia) are partitioned, these account for about 60 percent and 40 percent of the phenotypic variance. When VarG(Ia:a) and VarG(Ma) are also fitted, the four components each account for about 25 percent of the phenotypic variance. So the heritability has 'shrunk' from 40 percent top 25 percent. The 40 percent estimate is substantially wrong. It is biased because not all important components were fitted.
 
-So we need to be sure that our 4 component partitioning has not ignored some other effect that is large and significant. In the Results section we note that  there were some components (VarG(Id) and VarG(Md) ) which were too highly correlated with other components to be separately estimable. We also noted that VarG(Ma:a), VarGlm(I) and VarG(lp(I) were absolutely tiny and could be safely omitted. THen there were 5 components (VarE(M), VarGs(Ia), VarGs(Ma), CovG(Ia,Ma), and CovG(Ma,Ia))  which were quite small but not zero, and could also be omitted.
+So we need to be sure that our 4 component partitioning has not ignored some other effect that is large and significant. In the Results section we note that  there were some components (VarG(Id) and VarG(Md) ) which were too highly correlated with other components to be separately estimable. We also noted that VarG(Ma:a), VarGlm(I) and VarG(lp(I) were absolutely tiny and could be safely omitted. Then there were 5 components (VarE(M), VarGs(Ia), VarGs(Ma), CovG(Ia,Ma), and CovG(Ma,Ia))  which were quite small but not zero, and could also be omitted.
 
 What we have not checked is environmental cross-effect covariances. In particular CovE(I,M) and CovE(M,I) need to be examined. We ran another analysis partitioning the phenotypic variance into 9 components (VarE(I), VarG(Ia) , VarG(Ia:a), VarE(M), VarG(Ma), CovG(Ia,Ma), CovG(Ma,Ia), CovE(I,M), CovE(M,I)), so that all possible cross effect covariances were included). The estimates for CovE(I,M) and CovE(M,I) were tiny, and the other components did not shift around significantly. We conclude that cross effect covariances are not an issue, and can be ignored.
 
@@ -301,6 +301,52 @@ So you can get  almost any result you want by choosing a scale. Does that invali
 What the scale effect does prove is that the structure of this dataset is not solely responsible for the estimation of an epistatic component of variance. It can be removed or augmented by changing the data, either by going to another trait, or by rescaling the wrinkle score.
 
 \subsection{Other datasets}
+Here we look at the wrinkle score analysis on four other datasets. These are medium Peppin Merinos from the CSIRO experiment AB1, which was conducted by Dr Helen Newton Turner. We look at four subflocks from this experiment as follows
+\begin{description}
+\item[C line] ann unselected control flock
+\item[S line] a selection line with selection for high clean wool weight with culling on fibre diameter and wrinkle
+\item[MS line] a selection line with selection for rhigh clean wool weigh with culling on crimp frequency and wrinkle
+\item[FS lines] a series of lines with single trait selection up and down for the following traits; clean wool weight, yield, fibre diameter, fibre density, staple length, wrinkle score, body weight, clean wool weight per unit area. 
+\end{description}
+
+It was decided to partition five variance components - the four components which we reduced things to in the analyses of the Results section (VarE(I), VarG(Ia), VarG(Ia:a), VarG(Ma)), plus the maternal environmental component ( VarE(M)). We added VarE(M) because fitting maternal genetic variance without maternal environmental variance might be unwise.
+
+The result of these analyses for the four flocks are shown in Table~\ref{tab:4f5c}
+\input{tab4f5c.tex}
+We see that in three of the four flocks the result is similar to Table~\ref{tab:model4c}, while in one flock ( MS) there was no VarG(Ia:a) component at all.
+
+The maternal genetic component is small in all four flocks, and the added maternal environmental component is also small.
+
+The fixed effects model was the same as Table~\ref{tab:model4c} for Lines C, S, ams MS. For Line FS a Line effect had to be fitted, and this was combined with the Year of birth effect, so that the effect of selection over time was removed.
+
+Proportions of variance do not tell us everything. We need to look at actual variance components. These are given in Table~\ref{tab:4f5cvar}
+\input{tab4f5cvar.tex}
+We see that the MS Line does not have an overall reduction on all variances; it has a redistribution of variance. There is a large environmental variance (VarE(I)) and a large additive genetic variance (VarG(Ia)), and the epistatic additive x additive variance (VarG(Ia:a)) has gone to zero. This might be the result of the selection criteria used in the MS flock, as they were originally the same strain of Merino as the other 3 flocks.  Selection was for high clean wool weight, and there was culling for high crimp frequency and low wrinkle score. The high crmp frequency selection would have tended to pick sheep with a lot of collagen development, the low wrinkle score culling would have tended to pick sheep with a low amount of collagen development and a low follicle density. The combined effect would be not to change the collagen development and to lower follicle density. This would have the effect of minimising any interaction between collagen development and follicle density - the genes for collagen and the genes for follicle density would not interact and would therefore lead to little epistatic variance. This explanation is tenuous but plausible. 
+
+Apart from the MS Line, these analyses support a case for the existence of additive x additive epistatic variance for wrinkle score. 
+
+\subsection{Dominance variance}
+The FS Line analysed in the previous section may be suitable for partitioning of individual dominance variation. It consists of a number of small ( 50 ewe and 1 or 2 ram ) selected lines each of which over the period of the experimant reached higher levels of inbreeding than would be normally found in a large flock.
+
+We should at least take this opportiunity to have a look at dominance variation. We start with an analysis with the five components of the previous section plus VarG(Id) and VarG(Md). This is shown in Table~\ref{tab:dom7}
+\input{tabdom7.tex}
+So there is an individual dominance component (VarG(Id)), but a maternal dominance component (VarG(Md)). The standard errors look OK, but we need to check how VarG(Id) is correlated with other components. The correlations of columns of the W matrix are given in Table~\ref{tab:corrdom}
+\input{tabcorrdom.tex}
+There are a couple of 0.9 correlations of VarG(Id) with VarE(I) and  VarG(Ia:a), so we cannot be fully satisfied with this analysis. This is not as bad as it was when we attempted to partition dominance variance in the Results section. There the correlations were 0.99 and the dyadic model equations could not be solved.
+We might ask how inbred these FS Lines are, as that determines how much information on dominance variance is available. In Figure~\ref{fig:inbfs} we look at a histogram of the diagonal elements of the additive relationship matrix for the FS Lines. 
+\input{figinbfs.tex}
+This is a histogram of $(1 + F)$, so the inbreeding coefficients vary up to about 0.4, with most being below 0.2. This is only a moderate degree of inbreeding, but is high for a sheep flock.
+
+Another way of looking at it is to compare the phenotypic variance ( which is the sum of all the components) with the residual variance from fitting the fixed effects. In this analysis the former was 1.87 and the latter 1.57. This is a larger difference than is normally observed, and is due to the extra inbreeding in this flock. We can also compare these values to the phenotypic variance for the FS Lines without VarG(Id) in the model (1.71). So there is a slight increase when we include VarG(Id), indicating that it explains some extra variation rather than 'steals' it from other effects. The amount of 'extra' phenotypic variance is about half the size of the VarG(Id) estimate, so it 'steals' some and adds some.
+
+If there is an individual dominance variance component, we have to also ask if there are epistatic variances involving dominance. Up until now we had only looked at additive x additive epistasis. We now fit a furthe model partitioning additive x dominance epistasis and dominance x dominance epistasis. The result of this partitioning is gigiven in Table~\ref{tab:domepi}
+\input{tabdomepi.tex}
+So there is evidence of dominance x dominance epistasis, but not additive x dominance epistasis. The most important thing in Table~\ref{tab:domepi} is that the additive x additive epistatic component remains large. So all the analyses we have done ignoring VarG(Id) and VarG(Id:d) components have probably not been biased by these omitted variables. 
+
+In this analysis, the phenotypic variance estimate is 2.21, while the residual variance after fixed effects remains at 1.57. Comparing 2.21 with the 1.87 for the formar analysis shows that by adding VarG(Id:d) we have accounted for more variation, rather than 'stolen' it from other effects. This suggests that VarG(Id:d) is real, as it adds 0.34 to the phenotypic variance, but its own estimate is 0.54, so it also redistributes some variance from other effects.
+
+There remains the question of why wrinkle score should exhibit dominance. In natural populations, traits that are closely related to fitness tend to exhibit dominance, because natural selection tends to remove additive genetic variance so dominance ( and epistasis) are all that remain. That probably does not apply to domesticated species, where at least some of the natural selection is removed and replaced by man-made selection criteria. From what is known of the biology of wrinkle development, there are reasons why epistasis might be expected (see Discussion), but not dominance.  The only relevant observation might be the strong relationship observed between wrinkle and fertility.
+
 
 \begin{thebibliography}{99}
 
